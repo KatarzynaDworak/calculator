@@ -1,15 +1,13 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
-const add(prevResult, enteredNumber) {
-    const prevResult = currentResult
-    const enteredNumber = +userInput.value;
-    
-    const result = prevResult + enteredNumber;
+function getUserNumberInput() {
+   return +userInput.value;
 }
 
-currentResult = (currentResult + 10) * 3 / 2 - 1;
-
-let calculationDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
-
-outputResult(currentResult, calculationDescription);
+function add() {
+    const enteredNumber = getUserNumberInput;
+    const calcDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+    currentResult += enteredNumber;
+    outputResult(currentResult, calcDescription);
+}
