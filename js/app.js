@@ -5,7 +5,7 @@ function getUserNumberInput() {
    return +userInput.value;
 }
 
-function calculationDescription(oparator, resultBeforeCalc, calcNumber) {
+function createAndWriteOutput(oparator, resultBeforeCalc, calcNumber) {
     const calcDescription = `(${resultBeforeCalc} ${operator} ${calcNumber}`;
 }
 
@@ -14,7 +14,7 @@ function add() {
     const initialResult = currentResult
     currentResult += enteredNumber;
     outputResult(currentResult, calcDescription);
-    calculationDescription("+", initialResult, enteredNumber);
+    createAndWriteOutput("+", initialResult, enteredNumber);
 }
 
 function subtract() {
@@ -23,7 +23,7 @@ function subtract() {
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
     currentResult -= enteredNumber;
     outputResult(currentResult, calcDescription);
-    calculationDescription("-", initialResult, enteredNumber);
+    createAndWriteOutput("-", initialResult, enteredNumber);
 }
 
 function multiply() {
@@ -32,7 +32,7 @@ function multiply() {
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
     currentResult *= enteredNumber;
     outputResult(currentResult, calcDescription);
-    calculationDescription("*", initialResult, enteredNumber);
+    createAndWriteOutput("*", initialResult, enteredNumber);
 }
 
 function devide() {
@@ -41,7 +41,7 @@ function devide() {
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
     currentResult /= enteredNumber;
     outputResult(currentResult, calcDescription);
-    calculationDescription("/", initialResult, enteredNumber);
+    createAndWriteOutput("/", initialResult, enteredNumber);
 }
 
 addBtn.addEventListener("click", add);
