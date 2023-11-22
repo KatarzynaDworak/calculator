@@ -12,7 +12,7 @@ function add() {
     outputResult(currentResult, calcDescription);
 }
 
-function subtract(operator, ) {
+function subtract() {
     const enteredNumber = getUserNumberInput;
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
     currentResult += enteredNumber;
@@ -33,3 +33,7 @@ function devide() {
     outputResult(currentResult, calcDescription);
 }
 
+addBtn.addEventListener("click", add);
+subtractBtn.addEventListener("click", subtract);
+multiplyBtn.addEventListener("click", multiply);
+divideBtn.addEventListener("click", devide);
