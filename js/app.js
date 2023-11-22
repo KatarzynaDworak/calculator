@@ -11,30 +11,37 @@ function calculationDescription(oparator, resultBeforeCalc, calcNumber) {
 
 function add() {
     const enteredNumber = getUserNumberInput;
+    const initialResult = currentResult
     currentResult += enteredNumber;
     outputResult(currentResult, calcDescription);
-    calculationDescription("+", currentResult, enteredNumber);
+    calculationDescription("+", initialResult, enteredNumber);
 }
 
 function subtract() {
     const enteredNumber = getUserNumberInput;
+    const initialResult = currentResult
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
-    currentResult += enteredNumber;
+    currentResult -= enteredNumber;
     outputResult(currentResult, calcDescription);
+    calculationDescription("-", initialResult, enteredNumber);
 }
 
 function multiply() {
     const enteredNumber = getUserNumberInput;
+    const initialResult = currentResult
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
-    currentResult += enteredNumber;
+    currentResult *= enteredNumber;
     outputResult(currentResult, calcDescription);
+    calculationDescription("*", initialResult, enteredNumber);
 }
 
 function devide() {
     const enteredNumber = getUserNumberInput;
+    const initialResult = currentResult
     const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
-    currentResult += enteredNumber;
+    currentResult /= enteredNumber;
     outputResult(currentResult, calcDescription);
+    calculationDescription("/", initialResult, enteredNumber);
 }
 
 addBtn.addEventListener("click", add);
