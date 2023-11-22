@@ -1,10 +1,5 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
-let logEntries = [
-   liczba1: currentResult,
-   działanie: operator,
-   liczba2: enteredNumber,
-];
 
 function getUserNumberInput() {
    return +userInput.value;
@@ -20,8 +15,15 @@ function add() {
     currentResult += enteredNumber;
     outputResult(currentResult, calcDescription);
     createAndWriteOutput("+", initialResult, enteredNumber);
-    logEntries.push(enteredNumber);
+    const logEntry = {
+        operation: "ADD",
+        prevResult: initialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
     console.log(logEntries);
+    console.log(logEntry.operation);
 }
 
 function subtract() {
@@ -31,6 +33,14 @@ function subtract() {
     currentResult -= enteredNumber;
     outputResult(currentResult, calcDescription);
     createAndWriteOutput("-", initialResult, enteredNumber);
+    const logEntry = {
+        operation: "SUBTRACT",
+        prevResult: initialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 function multiply() {
@@ -40,6 +50,14 @@ function multiply() {
     currentResult *= enteredNumber;
     outputResult(currentResult, calcDescription);
     createAndWriteOutput("*", initialResult, enteredNumber);
+    const logEntry = {
+        operation: "MULTIPLY",
+        prevResult: initialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 function devide() {
@@ -49,6 +67,14 @@ function devide() {
     currentResult /= enteredNumber;
     outputResult(currentResult, calcDescription);
     createAndWriteOutput("/", initialResult, enteredNumber);
+    const logEntry = {
+        operation: "SUBTRACT",
+        prevResult: initialResult,
+        number: enteredNumber,
+        result: currentResult
+    };
+    logEntries.push(logEntry);
+    console.log(logEntries);
 }
 
 addBtn.addEventListener("click", add);
