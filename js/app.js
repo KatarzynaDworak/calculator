@@ -41,6 +41,7 @@ function subtract() {
     };
     logEntries.push(logEntry);
     console.log(logEntries);
+    console.log(logEntry.operation);
 }
 
 function multiply() {
@@ -58,6 +59,7 @@ function multiply() {
     };
     logEntries.push(logEntry);
     console.log(logEntries);
+    console.log(logEntry.operation);
 }
 
 function devide() {
@@ -68,13 +70,14 @@ function devide() {
     outputResult(currentResult, calcDescription);
     createAndWriteOutput("/", initialResult, enteredNumber);
     const logEntry = {
-        operation: "SUBTRACT",
+        operation: "DEVIDE",
         prevResult: initialResult,
         number: enteredNumber,
         result: currentResult
     };
     logEntries.push(logEntry);
     console.log(logEntries);
+    console.log(logEntry.operation);
 }
 
 addBtn.addEventListener("click", add);
