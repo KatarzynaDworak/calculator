@@ -1,5 +1,10 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
+let logEntries = [
+   liczba1: currentResult,
+   działanie: operator,
+   liczba2: enteredNumber,
+];
 
 function getUserNumberInput() {
    return +userInput.value;
@@ -15,6 +20,8 @@ function add() {
     currentResult += enteredNumber;
     outputResult(currentResult, calcDescription);
     createAndWriteOutput("+", initialResult, enteredNumber);
+    logEntries.push(enteredNumber);
+    console.log(logEntries);
 }
 
 function subtract() {
@@ -48,3 +55,4 @@ addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", devide);
+
