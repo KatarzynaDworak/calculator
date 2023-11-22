@@ -7,7 +7,29 @@ function getUserNumberInput() {
 
 function add() {
     const enteredNumber = getUserNumberInput;
-    const calcDescription = `(${defaultResult} + 10) * 3 / 2 - 1`;
+    const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
     currentResult += enteredNumber;
     outputResult(currentResult, calcDescription);
 }
+
+function subtract(operator, ) {
+    const enteredNumber = getUserNumberInput;
+    const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
+    currentResult += enteredNumber;
+    outputResult(currentResult, calcDescription);
+}
+
+function multiply() {
+    const enteredNumber = getUserNumberInput;
+    const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
+    currentResult += enteredNumber;
+    outputResult(currentResult, calcDescription);
+}
+
+function devide() {
+    const enteredNumber = getUserNumberInput;
+    const calcDescription = `(${currentResult} ${operator} ${enteredNumber}`;
+    currentResult += enteredNumber;
+    outputResult(currentResult, calcDescription);
+}
+
