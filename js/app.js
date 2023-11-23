@@ -26,6 +26,11 @@ function writeToLog(
     console.log(logEntry.operation);
 }
 
+function calculateResult() {
+    
+}
+
+
 function add() {
     const enteredNumber = getUserNumberInput;
     const initialResult = currentResult
