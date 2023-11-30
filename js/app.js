@@ -71,11 +71,3 @@ addBtn.addEventListener("click", add);
 subtractBtn.addEventListener("click", subtract);
 multiplyBtn.addEventListener("click", multiply);
 divideBtn.addEventListener("click", devide);
-
-const sayHello = () => {
-    const welcome = 'Hi '
-    
-    console.log(welcome + name);
-}
-
-sayHello(name, welcome);
